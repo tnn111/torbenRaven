@@ -8,12 +8,21 @@ MAINTAINER KBase Developer
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-RUN apt-get -y -q update \
-	&& apt-get -y -q install python3-dev \
-	&& apt-get -y -q install wget \
-	&& apt-get -y -q install gcc
+RUN apt-get -y -q update && \
+	apt-get -y -q install python3-dev && \
+	apt-get -y -q install wget && \
+	apt-get -y -q install build-essential
 
 RUN conda install -y -c bioconda raven-assembler
+RUN conda install cmake
+
+RUN cd /opt && \
+        git clone https://github.com/lbcb-sci/raven && \
+        cd raven && \
+        mkdir build && \
+        cd build && \
+        cmake -DCMAKE_BUILD_TYPE=Release .. && \
+        make install
 
 COPY ./ /kb/module
 RUN mkdir -p /kb/module/work
