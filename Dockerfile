@@ -13,7 +13,7 @@ RUN apt-get -y -q update && \
 	apt-get -y -q install wget && \
 	apt-get -y -q install build-essential
 
-RUN conda install -y -c bioconda raven-assembler
+#RUN conda install -y -c bioconda raven-assembler
 RUN conda install cmake
 
 RUN cd /opt && \
