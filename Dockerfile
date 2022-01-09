@@ -19,6 +19,8 @@ WORKDIR /kb/module
 
 RUN make all
 
+RUN conda install -c bioconda raven-assembler
+
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
 
 CMD [ ]
