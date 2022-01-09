@@ -6,10 +6,14 @@ MAINTAINER KBase Developer
 # install line here, a git checkout to download code, or run any other
 # installation scripts.
 
-# RUN apt-get update
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
+RUN apt-get -y -q update \
+	&& apt-get -y -q install python3-dev \
+	&& apt-get -y -q install wget \
+	&& apt-get -y -q install gcc
 
-# -----------------------------------------
+RUN conda install -y -c bioconda raven-assembler
 
 COPY ./ /kb/module
 RUN mkdir -p /kb/module/work
@@ -18,9 +22,6 @@ RUN chmod -R a+rw /kb/module
 WORKDIR /kb/module
 
 RUN make all
-
-RUN conda update -y -n base -c defaults conda
-RUN conda install -y -c bioconda raven-assembler
 
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
 
