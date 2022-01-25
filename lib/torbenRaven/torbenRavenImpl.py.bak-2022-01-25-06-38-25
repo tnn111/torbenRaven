@@ -63,7 +63,7 @@ This sample module contains one small method that filters contigs.
         #BEGIN run_torbenRaven
 
         # Print statements to stdout/stderr are captured and available as the App log
-        print("\nTorben was here", params['assembly_input_ref'], "\n")
+        print("\nTorben was here", params['assembly_input_ref'])
         logging.info('Starting run_torbenRaven function. Params=' + pformat(params))
 
         # Step 1 - Parse/examine the parameters and catch any errors

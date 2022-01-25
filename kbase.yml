@@ -2,7 +2,7 @@ module-name:
     torbenRaven
 
 module-description:
-    A KBase module
+    An App wrapping the Raven long read assembler.
 
 service-language:
     python

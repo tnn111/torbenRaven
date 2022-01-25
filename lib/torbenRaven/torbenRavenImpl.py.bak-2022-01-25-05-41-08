@@ -30,7 +30,7 @@ This sample module contains one small method that filters contigs.
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/tnn111/torbenRaven.git"
-    GIT_COMMIT_HASH = "9e6623f29ddb469b5981aff1be88f759b874c0d7"
+    GIT_COMMIT_HASH = "b21d754ff4b6a9c5ab31d53165076eea9b869942"
 
     #BEGIN_CLASS_HEADER
     # Class variables and functions can be defined in this block
@@ -63,7 +63,6 @@ This sample module contains one small method that filters contigs.
         #BEGIN run_torbenRaven
 
         # Print statements to stdout/stderr are captured and available as the App log
-        print("\nTorben was here", params['assembly_input_ref'], "\n")
         logging.info('Starting run_torbenRaven function. Params=' + pformat(params))
 
         # Step 1 - Parse/examine the parameters and catch any errors
