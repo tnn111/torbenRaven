@@ -88,6 +88,7 @@ class torbenRavenTest(unittest.TestCase):
         self.assertEqual(ret[0]['n_initial_contigs'], 3)
         self.assertEqual(ret[0]['n_contigs_removed'], 1)
         self.assertEqual(ret[0]['n_contigs_remaining'], 2)
+        print('Report_Name', ret[0]['report_name'])
 
     def test_run_torbenRaven_min_len_negative(self):
         with self.assertRaisesRegex(ValueError, 'min_length parameter cannot be negative'):

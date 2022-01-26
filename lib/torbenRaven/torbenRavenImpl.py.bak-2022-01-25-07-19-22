@@ -30,7 +30,7 @@ This sample module contains one small method that filters contigs.
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/tnn111/torbenRaven.git"
-    GIT_COMMIT_HASH = "32b2d4868b78c67b705ebff39e3afb3d6e39cf61"
+    GIT_COMMIT_HASH = "9e6623f29ddb469b5981aff1be88f759b874c0d7"
 
     #BEGIN_CLASS_HEADER
     # Class variables and functions can be defined in this block
