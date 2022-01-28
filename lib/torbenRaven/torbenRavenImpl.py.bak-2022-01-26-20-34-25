@@ -20,7 +20,7 @@ class torbenRaven:
 
     Module Description:
     A KBase module: torbenRaven
-This sample module contains one small method that filters contigs.
+This module warps the long read assembler Raven as a KBase App.
     '''
 
     ######## WARNING FOR GEVENT USERS ####### noqa

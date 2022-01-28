@@ -10,6 +10,7 @@ from torbenRaven.authclient import KBaseAuth as _KBaseAuth
 
 from installed_clients.AssemblyUtilClient import AssemblyUtil
 from installed_clients.WorkspaceClient import Workspace
+from installed_clients.ReadsUtilsClient import ReadsUtils
 
 
 class torbenRavenTest(unittest.TestCase):
@@ -88,6 +89,11 @@ class torbenRavenTest(unittest.TestCase):
         self.assertEqual(ret[0]['n_initial_contigs'], 3)
         self.assertEqual(ret[0]['n_contigs_removed'], 1)
         self.assertEqual(ret[0]['n_contigs_remaining'], 2)
+#        token = os.environ.get('KB_AUTH_TOKEN', None)
+#        downloadClient = ReadsUtils(url = os.environ['SDK_CALLBACK_URL'], token = os.environ['KB_AUTH_TOKEN'])
+        downloadClient = ReadsUtils(os.environ['SDK_CALLBACK_URL'])
+        long_reads = downloadClient.download_reads({'read_libraries': ['63572/2/1'], 'interleaved': None})['files']
+        print(long_reads)
         print('Report_Name', ret[0]['report_name'])
 
     def test_run_torbenRaven_min_len_negative(self):
