@@ -1,6 +1,6 @@
 /*
 A KBase module: torbenRaven
-This sample module contains one small method that filters contigs.
+This module wraps the Raven assembler as a KBase App.
 */
 
 module torbenRaven {
