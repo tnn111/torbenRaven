@@ -20,7 +20,7 @@ class torbenRaven:
 
     Module Description:
     A KBase module: torbenRaven
-This sample module contains one small method that filters contigs.
+This module wraps the Raven assembler as a KBase App.
     '''
 
     ######## WARNING FOR GEVENT USERS ####### noqa
@@ -31,7 +31,7 @@ This sample module contains one small method that filters contigs.
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/tnn111/torbenRaven.git"
-    GIT_COMMIT_HASH = "fc7e5ea14a7b079bb84335343829336e868c9f70"
+    GIT_COMMIT_HASH = "1e08126f9efea5eb3f9a56b7e99fd61c95c652c4"
 
     #BEGIN_CLASS_HEADER
     # Class variables and functions can be defined in this block

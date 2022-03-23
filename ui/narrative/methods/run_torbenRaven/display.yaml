@@ -21,21 +21,21 @@ suggestions:
         related:
             []
         next:
-            [annotate_contigset]
+            []
 
 #
 # Configure the display and description of parameters
 #
 parameters :
-    assembly_input_ref :
+    long_read_refs :
         ui-name : |
-            Assembly
+            Long reads for assembly; either PacBio or Nanopore.
         short-hint : |
-            The assembly to filter (will be overwritten)
-    min_length :
+            The long reads used for the assembly; these should be uncorrected PacBio or Nanopore reads.
+    output_assembly :
         ui-name : |
-            Min Length Threshold
+            The assembly resulting from running Raven on the long reads input.
         short-hint : |
-            All contigs below this length will be removed
+            The assembly.
 description : |
-    <p>This is a simple method designed to illustrate the KBase SDK.</p>
+    <p>This is a KBase app that wraps the Raven assembler.</p>

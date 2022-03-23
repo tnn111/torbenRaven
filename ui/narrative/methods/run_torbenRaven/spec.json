@@ -1,7 +1,7 @@
 {
     "ver": "0.0.1",
     "authors": [
-        "torben"
+        "torben", "laurenlui"
     ],
     "contact": "https://kbase.us/contact-us/",
     "categories": ["active"],
@@ -11,26 +11,25 @@
     },
     "parameters": [ 
         {
-            "id": "assembly_input_ref",
+            "id": "long_read_refs",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ "KBaseGenomeAnnotations.Assembly", "KBaseGenomes.ContigSet" ]
+                "valid_ws_types": [ "KBaseAssembly.SingleEndLibrary" ]
             }
         },
         {
-            "id": "min_length",
+            "id": "output_assembly",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "validate_as": "int",
-                "min_integer" : 0
+                "validate_as": "text"
             }
         }
     ],
@@ -47,12 +46,12 @@
                     "narrative_system_variable": "workspace_id",
                     "target_property": "workspace_id"
                 },{
-                    "input_parameter": "assembly_input_ref",
-                    "target_property": "assembly_input_ref",
+                    "input_parameter": "long_read_refs",
+                    "target_property": "long_read_refs",
                     "target_type_transform": "resolved-ref"
                 },{
-                    "input_parameter": "min_length",
-                    "target_property": "min_length"
+                    "input_parameter": "output_assembly",
+                    "target_property": "output_assembly"
                 }
             ],
             "output_mapping": [
